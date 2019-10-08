@@ -1,0 +1,32 @@
+version: "3"
+services:
+  demo-ui:
+    build: ./demo-ui
+    ports: 
+      - "80:80"
+    depends_on:
+      - arango-graphql
+      - graphql
+      - rest
+  arango-graphql:
+    build: ./services/arango-graphql-service
+    ports:
+      - "9191:9191"
+    depends_on:
+      - db
+  graphql:
+    build: ./services/graphql-service
+    ports:
+      - "9090:9090"
+    depends_on:
+      - db
+  rest:
+    build: ./services/rest-service
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+  db:
+    build: ./data
+    ports:
+      - "9529:8529"

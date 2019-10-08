@@ -19,7 +19,7 @@
                 
                
 <app-client-list [hidden]="mode != 'clients'"></app-client-list>
-<app-rest [hidden]="mode != 'rest'" (complete)="onComplete($event)" (viewModelUpdate)="onViewModelUpdate($event)"></app-rest>
+<app-rest [hidden]="mode != 'rest'"></app-rest>
 <app-gql [hidden]="mode != 'gql'"></app-gql>
 <app-gql [hidden]="mode != 'gql-arango'" apolloClientName="arango"></app-gql>
 </div>

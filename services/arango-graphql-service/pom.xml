@@ -15,7 +15,7 @@
 	<description>ArangoDB/GraphQL Services for AvoBank</description>
 
 	<properties>
-		<java.version>11</java.version>
+		<java.version>12</java.version>
 	</properties>
 
 	<dependencies>
@@ -23,12 +23,12 @@
         <dependency>
             <groupId>com.arangodb</groupId>
             <artifactId>arangodb-graphql</artifactId>
-            <version>1.1-SNAPSHOT</version>
+            <version>1.0</version>
         </dependency>
 		<dependency>
 			<groupId>com.arangodb</groupId>
 			<artifactId>arangodb-graphql-spring</artifactId>
-			<version>1.1-SNAPSHOT</version>
+			<version>1.0</version>
 		</dependency>
 
 		<dependency>
