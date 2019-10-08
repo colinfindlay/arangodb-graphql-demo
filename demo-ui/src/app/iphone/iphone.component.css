@@ -1,0 +1,20 @@
+.iphone {
+    background-image: url('/assets/iphone.png');
+    background-size: 432px 866px;
+    background-repeat: no-repeat;
+    width: 432px;
+    height: 866px;
+    padding-top: 55px;
+    padding-left: 30px;
+}
+
+.canvas {
+  width: 432px;
+  height: 866px;
+}
+
+.content {
+    height: 770px;
+    width: 370px;
+    overflow-y: scroll;
+}

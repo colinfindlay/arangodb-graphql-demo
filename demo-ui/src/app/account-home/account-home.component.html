@@ -1,0 +1,32 @@
+<div *ngIf="viewModel">
+  <div [class.rest-highlight]="highlight">
+    <div class="avocado-logo">
+      <img src="/assets/avocado.png">
+    </div>
+    <div class="hello">
+      Hello, <span class="client">{{viewModel?.firstName}}</span>
+    </div>
+    <ons-card *ngFor="let account of viewModel?.accounts">
+      <div class="title">
+        <span class="product">{{account.product?.name}}</span>
+      </div>
+      <div class="content">
+        <ons-list>
+          <ons-list-item>
+            <div class="left">
+              <img class="list-item__thumbnail product" src="{{icon(account)}}">
+            </div>
+            <div class="center">
+              <span class="list-item__title balance">{{account.balance?.value | currency : 'GBP'}}</span><span
+                class="list-item__subtitle account">{{account.accountNumber}} - {{account.branch?.sortCode}}</span>
+              <span class="list-item__subtitle branch">{{account.branch?.name}}</span>
+            </div>
+          </ons-list-item>
+        </ons-list>
+      </div>
+    </ons-card>
+  </div>
+</div>
+<div *ngIf="!viewModel" class="loading">
+  <img src="/assets/bigavocado.png">
+</div>

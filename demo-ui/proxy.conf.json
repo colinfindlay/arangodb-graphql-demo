@@ -1,0 +1,23 @@
+{
+    "/api/rest": {
+      "target": "http://localhost:8080",
+      "secure": false,
+      "pathRewrite": {
+        "^/api/rest": ""
+      }
+    },
+    "/graphql": {
+        "target": "http://localhost:9090/graphql",
+        "secure": false,
+        "pathRewrite": {
+          "^/graphql": ""
+        }
+      },
+      "/arangographql": {
+        "target": "http://localhost:9191/graphql",
+        "secure": false,
+        "pathRewrite": {
+          "^/arangographql": ""
+        }
+      }
+  }

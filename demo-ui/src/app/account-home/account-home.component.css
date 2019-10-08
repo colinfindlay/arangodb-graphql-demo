@@ -1,0 +1,36 @@
+.avocado-logo {
+    padding-left: 10px;
+}
+
+.hello {
+    text-align: center;
+    font-size: 28px;
+    color: white;
+  }
+
+  .rest-highlight .client {
+      border: 2px solid #20a8d8;
+  }
+
+  .rest-highlight .account {
+    border: 2px solid #4dbd74;
+}
+
+.rest-highlight .balance {
+    border: 2px solid #f86c6b;
+}
+
+.rest-highlight .product {
+    border: 2px solid #6610f2;
+}
+
+.rest-highlight .branch {
+    border: 2px solid #ffc107;
+}
+
+.loading {
+    padding-top: 200px;
+}
+
+
+

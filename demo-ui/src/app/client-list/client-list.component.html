@@ -1,0 +1,26 @@
+
+    <table class="table table-responsive-sm table-hover table-borderless mb-0">
+            <tbody>
+                <tr [class.table-primary]="selected() == 'C0001'" (click)="select('C0001')">
+                    <td>
+                        <div>Rick Rutherford</div>
+                        <div class="small text-muted">Standard Client</div>
+                    </td>
+                    <td>
+                            <div class="small text-muted">Accounts</div>
+                            <strong>1 Account</strong>
+                            </td>
+                </tr>
+                <tr [class.table-primary]="selected() == 'C0002'" (click)="select('C0002')">
+                    <td>
+                        <div>Claire Dimbleby</div>
+                        <div class="small text-muted">Premier Client</div>
+                    </td>
+                    <td>
+                            <div class="small text-muted">Accounts</div>
+                            <strong>15 Accounts</strong>
+                            </td>
+                </tr>
+                
+            </tbody>
+        </table>

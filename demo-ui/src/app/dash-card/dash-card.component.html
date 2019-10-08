@@ -1,0 +1,38 @@
+
+<div class="row">
+    <div class="col">
+        <div class="card">
+                        <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                  <a class="nav-link" [class.active]="mode == 'clients'" href="#" (click)="mode = 'clients'">Clients</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" [class.active]="mode == 'rest'" href="#" (click)="mode = 'rest'">REST</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" [class.active]="mode == 'gql'" href="#" (click)="mode = 'gql'">GraphQL</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" [class.active]="mode == 'gql-arango'" href="#" (click)="mode = 'gql-arango'">GraphQL ArangoDB</a>
+                                </li>
+                              </ul>
+                
+               
+<app-client-list [hidden]="mode != 'clients'"></app-client-list>
+<app-rest [hidden]="mode != 'rest'" (complete)="onComplete($event)" (viewModelUpdate)="onViewModelUpdate($event)"></app-rest>
+<app-gql [hidden]="mode != 'gql'"></app-gql>
+<app-gql [hidden]="mode != 'gql-arango'" apolloClientName="arango"></app-gql>
+</div>
+</div>
+</div>
+<div class="row">
+        <div class="col">
+            
+        </div>
+    </div>
+<div class="row">
+    <div class="col">
+
+    <app-sequence></app-sequence>
+</div>
+</div>

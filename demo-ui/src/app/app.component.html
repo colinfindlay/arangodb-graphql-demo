@@ -1,0 +1,13 @@
+
+<div class="container">
+  <div class="left">
+    <app-dash-card (viewModelUpdate)="onViewModelUpdate($event)"></app-dash-card>
+  </div>
+  <div class="right">
+      <app-iphone [viewModel]="viewModel"></app-iphone>
+  </div>
+</div>
+
+
+
+<router-outlet></router-outlet>

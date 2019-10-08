@@ -1,0 +1,20 @@
+<div class="card-body">
+    <div class="container">
+        <div class="left">
+            Highlight REST Resources on Screen
+        </div>
+        <div>
+                <ons-switch [value]="highlight" (change)="toggle($event.target.checked)"></ons-switch>
+        </div>
+        <div class="left">
+                Simulated Latency {{latency*10}}ms
+        </div>
+        <div>
+                <ons-range [(value)]="latency"></ons-range>
+        </div> 
+    </div>
+        
+    <button (click)="call()" class="btn btn-lg btn-primary btn-block" type="button">REST</button>
+</div>
+
+    

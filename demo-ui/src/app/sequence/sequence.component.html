@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="card-body">
+            <div class="brand-card">
+                    <div class="brand-card-body">
+                        <div>
+                            <div class="text-value">{{restCalls}}</div>
+                            <div class="text-uppercase text-muted small">service calls</div>
+                        </div>
+                        <div>
+                            <div class="text-value">{{databaseCalls}}</div>
+                            <div class="text-uppercase text-muted small">database calls</div>
+                        </div>
+                    </div>
+                </div>
+        <div *ngIf="loading">Loading...</div>
+        <div #diagram>
+        <div id="diagram" style="text-align: center"></div>
+    </div>
+    </div>
+</div>

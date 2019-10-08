@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+   }
+  
+  .left {
+    width: 90%;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    text-align: end;
+  }
+  

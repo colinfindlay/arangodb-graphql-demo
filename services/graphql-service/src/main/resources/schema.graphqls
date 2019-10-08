@@ -1,0 +1,46 @@
+type Client {
+   firstName: String
+   lastName: String
+   email: String
+   gender: String
+   avatar: String
+   company: String
+   language: String
+   ssn: String
+   jobTitle: String
+   companyName: String
+   street: String
+   city: String
+   state: String
+   country: String
+   phone: String
+   accounts: [Account]
+}
+
+type Account {
+    accountNumber: String
+    accountName: String
+    product: Product
+    branch: Branch
+    balance: Balance
+}
+
+type Product  {
+  name: String
+  productCode: String
+}
+
+type Branch {
+  name: String
+  sortCode: String
+}
+
+type Balance {
+  value: Float
+}
+
+type Query {
+
+  getClient(_key: String!): Client
+
+}

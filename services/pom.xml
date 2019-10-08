@@ -1,0 +1,18 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.colinfindlay.avobank</groupId>
+    <artifactId>arangodb-graphql-demo-services</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <name>Services for ArangoDB GraphQL Demo</name>
+
+    <modules>
+        <module>rest-service</module>
+        <module>graphql-service</module>
+	<module>arango-graphql-service</module>
+    </modules>
+</project>

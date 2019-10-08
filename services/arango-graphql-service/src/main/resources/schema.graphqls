@@ -1,0 +1,79 @@
+directive @edge(collection : String!, direction: String!) on FIELD_DEFINITION
+directive @vertex(collection : String!) on OBJECT
+
+# A Client of AvoBank
+type Client @vertex(collection: "Client"){
+   # The client's given name
+   firstName: String
+   # The client's surname
+   lastName: String
+   # The client's e-mail address
+   email: String
+   # The client's gender
+   gender: String
+   # A picture of the client
+   avatar: String
+   # The client's primary language
+   language: String
+   # The client's Social Security Number (U.S. only)
+   ssn: String
+   # The client's job title
+   jobTitle: String
+   # The client's employer
+   companyName: String
+   # The client's street address
+   street: String
+   # The client's city
+   city: String
+   # The client's state (USA) or province (Canada).
+   state: String
+   # The client's country
+   country: String
+   # The client's phone number
+   phone: String
+   # The client's AvoBank accounts
+   accounts: [Account] @edge(collection: "clientAccount", direction: "outbound")
+}
+
+# A financial account maintained by AvoBank for a client. A Account can be a deposit account, a credit card account, a current account, or any other type of account offered by a AvoBank, and represents the funds that the customer has entrusted to or borrowed from AvoBank.
+type Account @vertex(collection: "Account") {
+    # The Account Number
+    accountNumber: String
+    # The Account Name chosen by the client
+    accountName: String
+    # The product associated with this account
+    product: Product @edge(collection: "accountProduct", direction: "outbound")
+    # The branch this account is held in
+    branch: Branch @edge(collection: "accountBranch", direction: "outbound")
+    # The notional value of this account
+    balance: Balance @edge(collection: "accountBalance", direction: "outbound")
+}
+
+# A product offered to AvoBank customers such as a current account, savings account, or mortgage.
+type Product @vertex(collection: "Product")  {
+  # The name of the product
+  name: String
+  # Six character product code
+  productCode: String
+}
+
+# A branch is a retail location where AvoBank offers a wide array of face-to-face and automated services to its customers.
+type Branch @vertex(collection: "Branch")  {
+  #The name of the branch
+  name: String
+  #The branch code/sort code
+  sortCode: String
+}
+
+# The value of an AvoBank Account
+type Balance @vertex(collection: "Balance") {
+  # The notional value of an account
+  value: Float
+}
+
+# AvoBank Root Query Service
+type Query {
+  # Get an AvoBank client by their unique key (identifier)
+  getClient(_key: String!): Client
+
+}
