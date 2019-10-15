@@ -2,8 +2,7 @@
 server:
   port: 9191
 arangodb:
-  host: db
-  port: 8529
+  hosts: db:8529
   user: root
   password:
   database: avobank-graph
